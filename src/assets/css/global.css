@@ -1,0 +1,34 @@
+@charset "utf-8";
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{
+	margin:0;
+	padding:0;
+	}
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,button,div,.el-button
+.el-link,.el-radio,.el-checkbox,.el-input,.el-input-number,.el-select,.el-cascader,.el-slider,.el-time-select,.el-date-picker,.el-upload,.el-transfer,
+.el-form,.el-table,.el-tag,.el-progress,.el-tree,.el-pagination,.el-alert,.el-breadcrumb,.el-step,.el-dialog,.el-pagination{
+	font-size:14px;  
+    font-family:"PingFang-SC-Medium","Microsoft Yahei","Helvetica Neue",Arial,sans-serif;
+}
+body{font:normal 16px "PingFang-SC-Medium","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;color:#666;} 
+a{color:#333;text-decoration:none} 
+a:hover{text-decoration:underline} 
+em{font-style:normal} 
+li{list-style:none} 
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0} 
+p{word-wrap:break-word}
+html,body{
+    height:100%;
+    background-color:#f2f2f2;
+    color:#666;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    background-color: rgb(0, 0, 0) !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+    -webkit-tap-highlight-color:rgba(0,0,0,0) !important;
+}
+.el-button--mini, .el-button--small{
+	font-size:14px; 
+}

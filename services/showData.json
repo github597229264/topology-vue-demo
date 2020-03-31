@@ -1,0 +1,97 @@
+{
+  "firstNodeIndex": 0,
+  "ruleChainId": {
+    "entityType": "RULE_CHAIN",
+    "id": "061ef600-6831-11ea-a56e-fd5e0ea8fd27"
+  },
+  "nodes": [
+    {
+      "id": {
+        "entityType": "RULE_NODE",
+        "id": "db594b9a"
+      },
+      "type": "waveFilter",
+      "name": "滤波器--左右锚点",
+      "createdTime": 1585296835227,
+      "debugMode": false,
+      "additionalInfo": {
+        "layoutX": 404,
+        "layoutY": 223,
+        "description": ""
+      },
+      "configuration": {}
+    },
+    {
+      "id": {
+        "entityType": "RULE_NODE",
+        "id": "e59d3a8d"
+      },
+      "type": "attributeSet",
+      "name": "属性集-左右锚点",
+      "createdTime": 1585296835227,
+      "debugMode": false,
+      "additionalInfo": {
+        "layoutX": 731,
+        "layoutY": 309,
+        "description": ""
+      },
+      "configuration": {}
+    },
+    {
+      "id": {
+        "entityType": "RULE_NODE",
+        "id": "2dc75a47"
+      },
+      "type": "attributeSet",
+      "name": "属性集-左右锚点",
+      "createdTime": 1585296835227,
+      "debugMode": false,
+      "additionalInfo": {
+        "layoutX": 754,
+        "layoutY": 145,
+        "description": ""
+      },
+      "configuration": {}
+    }
+  ],
+  "connections": [
+    {
+      "fromIndex": 0,
+      "toIndex": 1,
+      "type": "连线22"
+    },
+    {
+      "fromIndex": 0,
+      "toIndex": 2,
+      "type": "连线11"
+    }
+  ],
+  "ruleChainConnections": [
+    {
+      "fromIndex": 1,
+      "targetRuleChainId": {
+        "entityType": "RULE_CHAIN",
+        "id": "e09a68b6"
+      },
+      "additionalInfo": {
+        "layoutX": 1083,
+        "layoutY": 336,
+        "ruleChainNodeId": "rule-chain-node-2"
+      },
+      "type": "结束连线2"
+    },
+    {
+      "fromIndex": 1,
+      "targetRuleChainId": {
+        "entityType": "RULE_CHAIN",
+        "id": "f96f9c99"
+      },
+      "additionalInfo": {
+        "layoutX": 1083,
+        "layoutY": 193,
+        "ruleChainNodeId": "rule-chain-node-1"
+      },
+      "type": "结束连线1"
+    }
+  ]
+}
