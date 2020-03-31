@@ -5,7 +5,7 @@ vue框架中引用topology拓扑图，可以自定义控件，实现流程图的
 欢迎交流、指正,欢迎留言
 
 firstAuthor:github597229264
-secondAuthor:ylyan
+secondAuthor:yulinYan
 
 邮箱:hxh597229264@sina.com
 微信:597229264  
