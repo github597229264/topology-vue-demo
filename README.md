@@ -1,6 +1,11 @@
-# rule-chain-demo
+# topology-vue-demo
 
-> ruleChain demo
+> topology-vue demo
+vue框架中引用topology拓扑图，可以自定义控件，实现流程图的绘制和显示功能,
+欢迎交流、指正,欢迎留言
+联系方式:
+邮箱:hxh597229264@sina.com
+微信:597229264  
 
 ## Build Setup
 
