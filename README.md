@@ -37,7 +37,7 @@ cnpm run e2e
 cnpm test
 ```
 
-点击[DEMO]查看运行效果(https://github597229264.github.io/topology-vue-demo/./dist/index.html)
+点击查看运行效果[DEMO](https://github597229264.github.io/topology-vue-demo/./dist/index.html)
 
 
 
