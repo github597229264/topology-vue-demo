@@ -14,6 +14,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-ui": "^2.13.0",
     "node-sass": "^4.13.0",
     "topology-activity-diagram": "^0.0.4",
     "topology-class-diagram": "^0.0.1",
@@ -22,8 +23,7 @@
     "topology-sequence-diagram": "^0.0.4",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuex": "^3.1.3",
-    "element-ui": "^2.13.0"
+    "vuex": "^3.1.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

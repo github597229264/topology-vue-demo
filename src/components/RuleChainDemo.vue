@@ -29,12 +29,12 @@
 
 <script>
   // 1. 导入绘画引擎
-  import {Topology} from 'topology-core';
-  import {Node} from 'topology-core/models/node';
-  import {Line} from 'topology-core/models/line';
+  import {Topology} from "topology-core";
+  import {Node} from "topology-core/models/node";
+  import {Line} from "topology-core/models/line";
   // import curve from 'topology-core/middles/curve'
-  import {Tools, canvasRegister} from '../../services/canvas.js';
-  import tab from './tab.vue';
+  import {Tools, canvasRegister} from "../../services/canvas.js";
+  import tab from "./tab.vue";
 
   export default {
     name: "RuleChainDemo",
@@ -44,22 +44,22 @@
     data() {
       return {
         tools: Tools,
-        activeNames: ['0'],
-        ruleChainId: '061ef600-6831-11ea-a56e-fd5e0ea8fd27',//规则链id 上一界面传递的值
-        noPassControl: ['inputControl', 'ruleChainControl'],//筛选掉的控件集合
+        activeNames: ["0"],
+        ruleChainId: "061ef600-6831-11ea-a56e-fd5e0ea8fd27",//规则链id 上一界面传递的值
+        noPassControl: ["inputControl", "ruleChainControl"],//筛选掉的控件集合
         canvas: {},
         canvasOptions: {
-          rotateCursor: '/img/rotate.cur',
+          rotateCursor: "/img/rotate.cur",
           activeColor: "red",//选中层颜色
           hoverColor: "green",//活动层颜色
-          hideInput: false,//是否禁止双击节点文字，出现文字输入框
+          hideInput: true,//是否禁止双击节点文字，出现文字输入框
           hideRotateCP: true,//是否隐藏节点旋转控制点
           hideSizeCP: true,//是否隐藏节点大小控制点
           disableEmptyLine: true//是否禁止连线终点为空（未连接到节点）
         },
         nodeData: null,//双击后传递的节点的数据
         tab: false,//控制弹框出现  true弹框出现  false弹框隐藏
-      }
+      };
     },
     created() {
       //2. 注册图形库
@@ -71,7 +71,7 @@
       // 3. 创建画布
       // 其中，第一个参数'topo-canvas'表示canvas所在的父dom元素id，通常为<div class="canvas" id="topo-canvas"></div>；
       // 第二个参数{}表示画布选项，这里表示全部使用默认值。具体选项请参考后面的api文档。
-      this.canvas = new Topology('topo-canvas', this.canvasOptions);
+      this.canvas = new Topology("topo-canvas", this.canvasOptions);
       // 4. 渲染图形
       let sourceData = {
         "firstNodeIndex": 0,
@@ -178,8 +178,9 @@
       //     item.name = "curve";
       //     item.calcControlPoints();
       //   });
+      //   console.log(this.canvas.data)
       //   this.canvas.updateProps();
-      // }, 1000);
+      // }, 3000);
 
       //5. 如果json发送变化，重绘
       this.canvas.render();
@@ -191,29 +192,28 @@
        * 监听控件拖动事件
        */
       onDrag(event, node) {
-        event.dataTransfer.setData('Text', JSON.stringify(node.data))
+        event.dataTransfer.setData("Text", JSON.stringify(node.data));
       },
       /**
        *监听双击事件
        **/
       onMessage(event, data) {
         if (event == "dblclick") {
-          // console.log(data)
+          console.log(data)
+          this.tab = true;
           if (data.node) {
-            this.tab = true;
-            this.nodeData = data.node
+            this.nodeData = data.node;
           } else {
-            this.tab = true;
             this.nodeData = data.line;
-            console.log(data.line)
+            console.log(data.line);
           }
         } else {
-          this.tab = false
+          this.tab = false;
         }
       },
       aside1_hide() {
-        this.$refs.aside1.style.left = "-200px"
-        this.left_show = false
+        this.$refs.aside1.style.left = "-200px";
+        this.left_show = false;
       },
       /**
        * 保存canvas绘制的图形
@@ -360,8 +360,8 @@
         //input控件默认图标和背景色
         let oControl = {
           data: {
-            fillStyle: '#A3EAA9',
-            icon: '\ueedc'
+            fillStyle: "#A3EAA9",
+            icon: "\ueedc"
           }
         };
         for (let aList = 0; aList < this.tools.length; aList++) {
@@ -394,7 +394,7 @@
             "fillStyle": oControl.data.fillStyle,
             "icon": oControl.data.icon,
             "iconSize": 18,
-            "iconColor": '#6A6A6A',
+            "iconColor": "#6A6A6A",
             "iconFamily": "iconfont",
             "imageWidth": 20,
             "imageHeight": 20,
@@ -408,7 +408,7 @@
             }
           }];
         let aLines = [];
-        let aRuleChain = [
+        let aRuleChain= [
           {
             "id": {"entityType": "RULE_CHAIN", "id": "f96f9c99"},
             "createdTime": 1584331354388,
@@ -436,8 +436,8 @@
           //默认控件图标和背景色
           let oControl = {
             data: {
-              fillStyle: '#ccc',
-              icon: '\ue608'
+              fillStyle: "#ccc",
+              icon: "\ue608"
             }
           };
           for (let aList = 0; aList < this.tools.length; aList++) {
@@ -464,7 +464,7 @@
             "fillStyle": oControl.data.fillStyle,
             "icon": oControl.data.icon,
             "iconSize": 18,
-            "iconColor": '#6A6A6A',
+            "iconColor": "#6A6A6A",
             "iconFamily": "iconfont",
             "imageWidth": 20,
             "imageHeight": 20,
@@ -490,8 +490,8 @@
                 },
                 "textOffsetX": -40,
                 "borderRadius": 0.25,
-                "name": 'ruleChainControl',
-                "strokeStyle": 'transparent',
+                "name": "ruleChainControl",
+                "strokeStyle": "transparent",
                 "rectInParent": {
                   "x": 40,
                   "y": 0,
@@ -544,8 +544,8 @@
           //规则链控件默认图标和背景色
           let oControl = {
             data: {
-              fillStyle: '#D6C4F1',
-              icon: '\ue62a'
+              fillStyle: "#D6C4F1",
+              icon: "\ue62a"
             }
           };
           for (let aList = 0; aList < this.tools.length; aList++) {
@@ -573,7 +573,7 @@
             "fillStyle": oControl.data.fillStyle,
             "icon": oControl.data.icon,
             "iconSize": 18,
-            "iconColor": '#6A6A6A',
+            "iconColor": "#6A6A6A",
             "iconFamily": "iconfont",
             "imageWidth": 20,
             "imageHeight": 20,
@@ -599,8 +599,8 @@
                 },
                 "textOffsetX": -40,
                 "borderRadius": 0.25,
-                "name": 'ruleChainControl',
-                "strokeStyle": 'transparent',
+                "name": "ruleChainControl",
+                "strokeStyle": "transparent",
                 "rectInParent": {
                   "x": 40,
                   "y": 0,
@@ -661,7 +661,7 @@
         //添加开始控件和第一个控件的连接线
         aLines.push({
           "id": new Date().getTime(),
-          "name": "line",
+          "name": "curve",
           "controlPoints": [
             {
               "x": aNodes[0].rect.x + 240,
@@ -705,7 +705,7 @@
       },
 
     }
-  }
+  };
 </script>
 
 <style lang="scss" scoped>
